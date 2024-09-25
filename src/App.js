@@ -1,11 +1,15 @@
 import './App.css';
+import Dictionary from "./Dictionary";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        Dictionary App
-      </header>
+      <div className="container">
+        <Dictionary />
+        <footer>
+          This app is coded by <a href='https://www.shecodes.io/graduates/123692-blossom-armstrong'>Blossom Armstrong</a> is hosted on <a href='https://app.netlify.com/sites/stalwart-starship-237871/overview'>Netlify</a> and is open sourced on <a href='https://github.com/BLSSMA/dictionary-app'>Github</a>
+        </footer>
+      </div>
     </div>
   );
 }
