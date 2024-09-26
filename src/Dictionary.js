@@ -19,6 +19,7 @@ function search(event){
 }   
 
 function handleKeyWordChange(event){
+    event.preventDefault();
     setKeyword(event.target.value);
     }
 
