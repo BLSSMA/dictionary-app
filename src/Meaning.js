@@ -10,7 +10,7 @@ export default function Meaning(props){
         {props.meaning.partOfSpeech}
     </p>
     <p>
-        {props.meaning.definition}
+        {props.meaning.definition} 
         <br />
         < br />
         {props.meaning.example}
