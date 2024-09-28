@@ -5,7 +5,7 @@ import Results from "./Results";
 
 export default function Dictionary(){
     let [keyWord, setKeyword] = useState("");
-    let [results, setResults] = useState({});
+    let [results, setResults] = useState(null);
     
 function handleResponse(response){
     setResults(response.data);
@@ -19,7 +19,6 @@ function search(event){
 }   
 
 function handleKeyWordChange(event){
-    event.preventDefault();
     setKeyword(event.target.value);
     }
 
@@ -27,7 +26,6 @@ function handleKeyWordChange(event){
         <div>
             <form onSubmit={search}>
                 <input type="search" autoFocus={true} onChange={handleKeyWordChange}/>
-                <input type="submit" />
             </form>
         </div>
             <Results results={results}/>
