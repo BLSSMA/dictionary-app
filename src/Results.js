@@ -12,6 +12,10 @@ console.log(props.results.meanings[0].definition);
       <h3>{props.results.phonetic}</h3>
      <p>
         <Meaning meaning={props.results.meanings[0]}/>
+                <Meaning meaning={props.results.meanings[1]}/>
+                        <Meaning meaning={props.results.meanings[2]}/>
+
+
      </p>
     </div>);
 }else{
