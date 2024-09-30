@@ -5,10 +5,12 @@ import Results from "./Results";
 
 export default function Dictionary(){
     let [keyWord, setKeyword] = useState("");
-    let [results, setResults] = useState(null);
-    
+    let [results, setResults] = useState(null);    
+
+
 function handleResponse(response){
     setResults(response.data);
+    
 }
 
 function search(event){
