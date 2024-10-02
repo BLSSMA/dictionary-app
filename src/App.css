@@ -1,8 +1,12 @@
 footer{
     text-align: center;
     font-size: small;
+    padding-bottom:20px;
 }
 footer a{
     text-decoration: none;
-    color:rgb(198, 54, 133);
+    color:#773cb1;
+}
+.App{
+        background-color: #c06c843b;
 }

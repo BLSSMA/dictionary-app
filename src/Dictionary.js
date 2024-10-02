@@ -37,9 +37,11 @@ function handleKeyWordChange(event){
     }
 if(loaded){
     return <div className="Dictionary">
+        <h1>What Word Would You Like To Look Up?</h1>
         <div>
             <form onSubmit={handleSubmit}>
-                <input type="search" autoFocus={true} onChange={handleKeyWordChange}/>
+                <input type="search" autoFocus={true} onChange={handleKeyWordChange}
+                defaultValue={props.defaultKeyword}/>
             </form>
         </div>
             <Results results={results} />

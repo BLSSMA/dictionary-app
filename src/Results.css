@@ -1,0 +1,22 @@
+.Results h2{
+    font-size: 46px;
+    font-weight: bold;
+    margin:20px 0 10px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+
+
+}
+
+.Results h2, .Results h3, .Results .phonetics{
+    text-align: center;
+}
+.Results .phonetics{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 25%;
+    text-align: center;
+    margin:0 auto;
+    padding: 12px 0;
+
+}
