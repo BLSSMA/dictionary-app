@@ -13,11 +13,13 @@ function handleResponse(response){
     
 }
 
+
 function search(event){
     event.preventDefault();
     let apiKey = `01dd2bca25c0t00b3d253f443e0of791`
     let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyWord}&key=${apiKey}`
     axios.get(apiUrl).then(handleResponse);
+
 }   
 
 function handleKeyWordChange(event){
@@ -30,6 +32,6 @@ function handleKeyWordChange(event){
                 <input type="search" autoFocus={true} onChange={handleKeyWordChange}/>
             </form>
         </div>
-            <Results results={results}/>
+            <Results results={results} />
     </div>;
 }
