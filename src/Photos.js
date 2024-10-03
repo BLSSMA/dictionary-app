@@ -1,26 +1,25 @@
-import React, {useState} from "react";
-import axios from "axios";
+import React from "react";
+import "./Photos.css";
+import "./Meaning.css"
+
 
 export default function Photos(props){
-let [photoDisplay, setPhotoDisplay] = useState(null);
+    const maxResults = 9;
 
-function handlePhotos(){
-    console.log(props.photo.photos);
-   setPhotoDisplay(props.photos.src.landscape)
-}
-
-function photoSource(){
-    let apiUrlKeyThird = `01dd2bca25c0t00b3d253f443e0of791`;
-    let apiUrlThird = `https://api.shecodes.io/images/v1/search?query=${props.photo}&key=${apiUrlKeyThird}`;
-    axios.get(apiUrlThird).then(handlePhotos);
-}
-
-if (props.photo){
+if (props.photos){
     return( 
-        <div>
- <section>{photoDisplay.map(function(photo, index){
-            return(<img src={photoSource} key={index} alt={photo.alt}/>)
-   })}</section>
+        <div className="Photos">
+ <section>
+    <div className="d-grid photosGrid">
+      <div className="row">
+    {props.photos.slice(0, maxResults).map(function(photo, index){
+        return(
+          
+            <div className="col-4" key={index}>
+           <a href={photo.src.original} target="_blank" rel="noreferrer"><img src={photo.src.landscape} alt={photo.alt} title={photo.alt} className="img-fluid"/>
+        </a></div>)
+    })}</div>
+ </div></section>
  </div>)
 }else{ return(null);
 }

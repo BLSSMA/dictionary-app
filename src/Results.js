@@ -1,8 +1,8 @@
 import React from "react";
 import "./Results.css";
 import Meaning from "./Meaning";
-import Phonetic from "./Phonetic";
 import Photos from "./Photos"
+import Phonetic from "./Phonetic";
 
 
 export default function Results(props){

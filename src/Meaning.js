@@ -4,6 +4,7 @@ import "./Meaning.css";
 
 export default function Meaning(props){
     
+    if(props.meaning){
     return(
 <div className="Meaning">
 
@@ -24,5 +25,4 @@ export default function Meaning(props){
     </div>
     </section>
     </div>
-    )
-}
+   )}else{return null}}

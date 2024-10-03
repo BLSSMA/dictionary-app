@@ -4,20 +4,18 @@ import { AiFillSound } from "react-icons/ai";
 
 
 export default function Phonetic(props){
-    let [phoneticSound, setPhoneticSound] = useState(null)
+    let [phoneticUrl, setPhoneticUrl] = useState(null)
 
-function handleClick(){
-
-      setPhoneticSound (`https://api.dictionaryapi.dev/media/pronunciations/en/${props.phonetic}-us.mp3`);
+function setUrl(){
+      setPhoneticUrl (`https://api.dictionaryapi.dev/media/pronunciations/en/${props.phonetic}-us.mp3`);
     }
 
 
-    function sound(){
-    let keyWord = `${props.phonetic}`
-    let apiUrlSecondary = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyWord}`
-    axios.get(apiUrlSecondary).then(handleClick);
+    function handleClick(){
+    let apiUrlSecondary = `https://api.dictionaryapi.dev/api/v2/entries/en/${props.phonetic}`
+    axios.get(apiUrlSecondary).then(setUrl);
     }
 
  
-    return <div><a href={phoneticSound} target="_blank" rel="noreferrer"><AiFillSound onClick={sound}/></a></div>
+    return <div><a href={phoneticUrl} target="_blank" rel="noreferrer"><AiFillSound onClick={handleClick}/></a></div>
 }
