@@ -4,6 +4,25 @@
     text-align: center;
     font-style: italic;
 }
+.Dictionary h2 {
+    font-size: 46px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    text-align: center;
+
+}
+
+.Dictionary h3{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding-left:110px;
+            text-align: center;
+ 
+}
 
 .Dictionary{
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -22,6 +41,10 @@
 }
 .Dictionary em{
    display:block;
-   margin:0 auto;
+    margin:0 auto;
+    text-align: center;
    font-size: 13px;
+}
+.Dictionary .Phonetic{
+display:flex;
 }

@@ -1,21 +1,25 @@
-import React, {useState} from "react";
-import axios from "axios";
-import { AiFillSound } from "react-icons/ai";
+import React from "react";
+import "./Phonetic.css"
 
+import { AiOutlineSound } from "react-icons/ai";
 
 export default function Phonetic(props){
-    let [phoneticUrl, setPhoneticUrl] = useState(null)
 
-function setUrl(){
-      setPhoneticUrl (`https://api.dictionaryapi.dev/media/pronunciations/en/${props.phonetic}-us.mp3`);
-    }
+if (props.phonetic){
+    return( 
+        <div className="Phonetic">
+ <section>
+           <a href={props.phonetic} target="_blank" rel="noreferrer" className="soundIcon"><AiOutlineSound/>
+        </a>
+
+    </section>
+ </div>)
+}else{ return(null);
+}
 
 
-    function handleClick(){
-    let apiUrlSecondary = `https://api.dictionaryapi.dev/api/v2/entries/en/${props.phonetic}`
-    axios.get(apiUrlSecondary).then(setUrl);
-    }
+
+
 
  
-    return <div><a href={phoneticUrl} target="_blank" rel="noreferrer"><AiFillSound onClick={handleClick}/></a></div>
 }

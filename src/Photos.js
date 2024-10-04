@@ -15,7 +15,7 @@ if (props.photos){
     {props.photos.slice(0, maxResults).map(function(photo, index){
         return(
           
-            <div className="col-4" key={index}>
+            <div className="col-sm-4" key={index}>
            <a href={photo.src.original} target="_blank" rel="noreferrer"><img src={photo.src.landscape} alt={photo.alt} title={photo.alt} className="img-fluid"/>
         </a></div>)
     })}</div>
