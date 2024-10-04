@@ -15,13 +15,8 @@
 }
 
 .Dictionary h3{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    align-items: center;
-    padding-left:110px;
-            text-align: center;
- 
+text-align: center;
+margin:0 auto;
 }
 
 .Dictionary{

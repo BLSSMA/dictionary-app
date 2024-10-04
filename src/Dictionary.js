@@ -67,9 +67,9 @@ if(loaded){
             <em className="examples">Try: lamp, coffee, halt, host etc.</em>
         </div>
        <h2>{keyWord}</h2>
-
         <h3>{phoneticText}
-       <Phonetic phonetic={phonetic}/></h3>
+       <Phonetic phonetic={phonetic}/>
+       </h3>
             <Results results={results} /> 
             <Photos photos={photos} />
 </div>;
